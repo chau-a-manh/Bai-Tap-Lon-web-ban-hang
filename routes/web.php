@@ -22,6 +22,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 
     // Trang Quản lý doanh thu (Dashboard)
     Route::get('/admin', [\App\Http\Controllers\OrderController::class, 'dashboard'])->name('admin.dashboard');
+    // Trang Danh sách tài khoản người dùng
+    Route::get('/admin/khach-hang', [\App\Http\Controllers\OrderController::class, 'users'])->name('admin.users');
 
     // Trang Lịch sử Order và Sản phẩm Yêu thích
     Route::get('/lich-su-order', [\App\Http\Controllers\OrderController::class, 'history'])->name('order.history');

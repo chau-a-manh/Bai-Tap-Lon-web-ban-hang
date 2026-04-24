@@ -135,4 +135,17 @@ class OrderController extends Controller
 
         return view('favorites', compact('favorites'));
     }
+    // 10. Trang Quản lý Tài khoản (Dành cho Admin)
+    public function users()
+    {
+        // Chặn nếu không phải Admin
+        if (\Illuminate\Support\Facades\Auth::user()->role != 1) {
+            return redirect('/')->with('error', 'Bạn không có quyền truy cập!');
+        }
+
+        // Lấy danh sách tất cả tài khoản, sắp xếp mới nhất lên đầu
+        $users = \App\Models\User::orderBy('id', 'desc')->get();
+
+        return view('admin.users', compact('users'));
+    }
 }

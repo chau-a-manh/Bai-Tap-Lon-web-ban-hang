@@ -49,17 +49,21 @@
             </div>
 
             <div class="col-md-4 mb-3">
-                <div class="card bg-warning text-dark border-0 shadow rounded-3 h-100 p-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="text-uppercase fw-normal text-black-50">Khách Hàng Đăng Ký</h6>
-                                <h3 class="fw-bold mb-0">{{ $totalUsers }} <span class="fs-6 fw-normal">người</span></h3>
+                <a href="{{ route('admin.users') }}" class="text-decoration-none">
+                    <div class="card bg-warning text-dark border-0 shadow rounded-3 h-100 p-3"
+                        style="transition: transform 0.2s;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-uppercase fw-normal text-black-50">Khách Hàng Đăng Ký</h6>
+                                    <h3 class="fw-bold mb-0 text-dark">{{ $totalUsers }} <span
+                                            class="fs-6 fw-normal">người</span></h3>
+                                </div>
+                                <i class="fa fa-users fa-3x text-black-50"></i>
                             </div>
-                            <i class="fa fa-users fa-3x text-black-50"></i>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 
