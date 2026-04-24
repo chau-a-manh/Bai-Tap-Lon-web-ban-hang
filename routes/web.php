@@ -113,3 +113,15 @@ Route::get('/thong-tin/doi-hang', function () {
 Route::get('/thong-tin/van-chuyen', function () {
     return view('information.van-chuyen');
 })->name('info.van-chuyen');
+
+// Route Tìm kiếm sản phẩm
+Route::get('/tim-kiem', function (\Illuminate\Http\Request $request) {
+    $keyword = $request->input('keyword');
+
+    // Tìm trong database các sản phẩm có TÊN chứa từ khóa (LIKE %keyword%)
+    $products = \App\Models\Product::where('name', 'LIKE', '%' . $keyword . '%')
+        ->orderBy('id', 'desc')
+        ->paginate(12);
+
+    return view('search', compact('products', 'keyword'));
+})->name('search');

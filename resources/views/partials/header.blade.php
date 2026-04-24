@@ -42,11 +42,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex">
+            <form action="{{ route('search') }}" method="GET" class="d-flex align-items-center ms-auto me-4"
+                style="width: 250px;">
                 <div class="input-group">
-                    <input type="text" class="form-control rounded-pill" placeholder="Tìm kiếm...">
+                    <input type="text" name="keyword" class="form-control rounded-pill rounded-end"
+                        placeholder="Tìm kiếm..." value="{{ request('keyword') }}" required>
+                    <button class="btn btn-outline-secondary rounded-pill rounded-start border-start-0" type="submit"
+                        style="margin-left: -40px; z-index: 10;">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
     </nav>
 </header>
