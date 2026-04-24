@@ -94,3 +94,20 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/thanh-toan/cap-nhat/{id}', [OrderController::class, 'update'])->name('order.update');
     Route::delete('/don-hang/huy/{id}', [OrderController::class, 'destroy'])->name('order.destroy');
 });
+
+// Các trang thông tin (Tin Tức)
+Route::get('/thong-tin/tam-nhin', function () {
+    return view('information.tam-nhin');
+})->name('info.tam-nhin');
+Route::get('/thong-tin/bao-mat', function () {
+    return view('information.bao-mat');
+})->name('info.bao-mat');
+Route::get('/thong-tin/mua-hang', function () {
+    return view('information.mua-hang');
+})->name('info.mua-hang');
+Route::get('/thong-tin/doi-hang', function () {
+    return view('information.doi-hang');
+})->name('info.doi-hang');
+Route::get('/thong-tin/van-chuyen', function () {
+    return view('information.van-chuyen');
+})->name('info.van-chuyen');

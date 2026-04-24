@@ -18,7 +18,8 @@
                     <div class="card-body px-0 pt-3">
                         <p class="card-title text-uppercase mb-1" style="font-size: 14px;">Tầm nhìn - Sứ mệnh H'mông</p>
                         <p class="text-muted small mb-3">Tầm nhìn - Sứ mệnh H'mông</p>
-                        <a href="#" class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
+                        <a href="{{ route('info.tam-nhin') }}" class="text-danger text-decoration-none small fst-italic">Xem
+                            thêm</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,8 @@
                     <div class="card-body px-0 pt-3">
                         <p class="card-title mb-1" style="font-size: 14px;">Chính sách bảo mật thông tin</p>
                         <p class="text-muted small mb-3">Chính sách bảo mật thông tin</p>
-                        <a href="#" class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
+                        <a href="{{ route('info.bao-mat') }}" class="text-danger text-decoration-none small fst-italic">Xem
+                            thêm</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +57,8 @@
                     <div class="card-body px-0 pt-3">
                         <p class="card-title mb-1" style="font-size: 14px;">Hướng dẫn mua hàng</p>
                         <p class="text-muted small mb-3">Cách thức xem hàng và đặt hàng</p>
-                        <a href="#" class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
+                        <a href="{{ route('info.mua-hang') }}" class="text-danger text-decoration-none small fst-italic">Xem
+                            thêm</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +70,8 @@
                     <div class="card-body px-0 pt-3">
                         <p class="card-title mb-1" style="font-size: 14px;">Chính sách đổi hàng</p>
                         <p class="text-muted small mb-3">QUY ĐỊNH ĐỔI HÀNG</p>
-                        <a href="#" class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
+                        <a href="{{ route('info.doi-hang') }}"
+                            class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +83,8 @@
                     <div class="card-body px-0 pt-3">
                         <p class="card-title mb-1" style="font-size: 14px;">Chính sách vận chuyển</p>
                         <p class="text-muted small mb-3">VẬN CHUYỂN</p>
-                        <a href="#" class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
+                        <a href="{{ route('info.van-chuyen') }}"
+                            class="text-danger text-decoration-none small fst-italic">Xem thêm</a>
                     </div>
                 </div>
             </div>
