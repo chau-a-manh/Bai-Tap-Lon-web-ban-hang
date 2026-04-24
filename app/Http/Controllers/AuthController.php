@@ -84,4 +84,30 @@ class AuthController extends Controller
 
         return redirect()->route('profile')->with('success', 'Đổi mật khẩu thành công!');
     }
+
+    // Hiển thị form thay đổi thông tin cá nhân
+    public function editProfileForm()
+    {
+        $user = \Illuminate\Support\Facades\Auth::user();
+        return view('edit-profile', compact('user'));
+    }
+
+    // Xử lý Cập nhật thông tin
+    public function updateProfile(Request $request)
+    {
+        $user = \App\Models\User::find(\Illuminate\Support\Facades\Auth::id());
+
+        // Cập nhật dữ liệu từ form vào CSDL
+        $user->full_name = $request->full_name;
+        $user->phone = $request->phone;
+        $user->ngay_sinh = $request->ngay_sinh;
+        $user->tinh_thanh_pho = $request->tinh_thanh_pho;
+        $user->phuong_xa = $request->phuong_xa;
+        $user->dia_chi_chi_tiet = $request->dia_chi_chi_tiet;
+
+        $user->save(); // Lưu lại
+
+        // Chuyển hướng về trang Tài khoản và mang theo thông báo
+        return redirect()->route('profile')->with('success', 'Cập nhật thông tin cá nhân thành công!');
+    }
 }

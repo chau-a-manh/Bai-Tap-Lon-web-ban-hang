@@ -28,7 +28,8 @@
                 </p>
 
                 <ul class="list-unstyled lh-lg mt-4">
-                    <li><a href="#" class="text-dark text-decoration-none">Thay đổi thông tin tài khoản</a></li>
+                    <li><a href="{{ route('profile.edit.form') }}" class="text-dark text-decoration-none">Thay đổi thông tin
+                            tài khoản</a></li>
                     <li><a href="{{ route('password.change.form') }}" class="text-dark text-decoration-none">Thay đổi mật
                             khẩu</a></li>
 
@@ -66,4 +67,10 @@
             </div>
         </div>
     </div>
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show text-center rounded-0" role="alert">
+            <i class="fa fa-check-circle me-2"></i> {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 @endsection

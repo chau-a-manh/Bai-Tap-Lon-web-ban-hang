@@ -129,3 +129,7 @@ Route::get('/tim-kiem', function (\Illuminate\Http\Request $request) {
 // Trang Đổi mật khẩu
 Route::get('/thay-doi-mat-khau', [\App\Http\Controllers\AuthController::class, 'changePasswordForm'])->name('password.change.form');
 Route::post('/thay-doi-mat-khau', [\App\Http\Controllers\AuthController::class, 'changePassword'])->name('password.change');
+
+// Trang Thay đổi thông tin cá nhân
+Route::get('/thay-doi-thong-tin', [\App\Http\Controllers\AuthController::class, 'editProfileForm'])->name('profile.edit.form');
+Route::post('/thay-doi-thong-tin', [\App\Http\Controllers\AuthController::class, 'updateProfile'])->name('profile.update');
