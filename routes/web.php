@@ -125,3 +125,7 @@ Route::get('/tim-kiem', function (\Illuminate\Http\Request $request) {
 
     return view('search', compact('products', 'keyword'));
 })->name('search');
+
+// Trang Đổi mật khẩu
+Route::get('/thay-doi-mat-khau', [\App\Http\Controllers\AuthController::class, 'changePasswordForm'])->name('password.change.form');
+Route::post('/thay-doi-mat-khau', [\App\Http\Controllers\AuthController::class, 'changePassword'])->name('password.change');

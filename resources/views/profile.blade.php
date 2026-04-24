@@ -29,7 +29,8 @@
 
                 <ul class="list-unstyled lh-lg mt-4">
                     <li><a href="#" class="text-dark text-decoration-none">Thay đổi thông tin tài khoản</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">Thay đổi mật khẩu</a></li>
+                    <li><a href="{{ route('password.change.form') }}" class="text-dark text-decoration-none">Thay đổi mật
+                            khẩu</a></li>
 
                     @if (Auth::user()->role == 1)
                         <li
@@ -58,7 +59,8 @@
                 <ul class="list-unstyled lh-lg">
                     <li><a href="{{ route('favorites') }}" class="text-secondary text-decoration-none">Sản phẩm yêu thích
                             ({{ $soYeuThich }})</a></li>
-                    <li><a href="{{ route('order.history') }}" class="text-secondary text-decoration-none">Lịch sử order</a>
+                    <li><a href="{{ route('order.history') }}" class="text-secondary text-decoration-none">Lịch sử
+                            order</a>
                     </li>
                 </ul>
             </div>
